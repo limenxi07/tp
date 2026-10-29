@@ -267,6 +267,9 @@ Other rules:
   value proposition, user stories, use cases, NFRs, glossary), manual testing, Acknowledgements, and optionally
   "Appendix: Planned Enhancements". UML must use the notation taught in the course, with PlantUML sources in
   `docs/diagrams`. Keep diagrams simple and high-level, and use short code snippets only.
+- When a change alters behavior, update every place in the DG that describes it, not just the section nearest the
+  change. The same behavior is often described in the implementation notes, the use cases, the manual-testing steps,
+  and the diagrams. Search `docs/` for the old message text, command word, and class names, and fix every match.
 - Check docs for broken links, typos, messy formatting, and inconsistency with the product. These are all graded as
   documentation bugs.
 - Docs style: markdown compatible with Jekyll/kramdown. The SE-EDU Markdown style guide and the Google developer
@@ -289,7 +292,8 @@ Other rules:
 - [ ] Commit subjects follow section 5 and are authored by the responsible member, with no `Co-Authored-By` trailer.
 - [ ] `./gradlew clean test checkstyleMain checkstyleTest` passes and `sh .github/run-checks.sh` is clean.
 - [ ] Javadoc exists on new classes and public methods, and names, braces, imports, and line length follow section 4.
-- [ ] Docs are updated where behavior changed (UG, DG, diagrams).
+- [ ] Docs are updated where behavior changed (UG, DG, diagrams), including every DG section that describes it
+      (implementation, use cases, manual testing), found by searching `docs/` for the old wording (section 7).
 - [ ] A teammate has been asked to review.
 
 ## 10. Reference links
